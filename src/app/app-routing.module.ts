@@ -9,12 +9,16 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+    loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule)
   },
-  {
-    path: 'list',
-    loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
-  }
+  { 
+    path: 'select-car', 
+    loadChildren: './pages/select-car/select-car.module#SelectCarPageModule' 
+  },
+  { path: 'maintenance', loadChildren: './pages/maintenance/maintenance.module#MaintenancePageModule' },
+  { path: 'baja-club', loadChildren: './pages/baja-club/baja-club.module#BajaClubPageModule' },
+  { path: 'manual', loadChildren: './pages/manual/manual.module#ManualPageModule' },
+  { path: 'car', loadChildren: './pages/car/car.module#CarPageModule' }
 ];
 
 @NgModule({

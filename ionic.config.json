@@ -1,5 +1,7 @@
 {
   "name": "Baja",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

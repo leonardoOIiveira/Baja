@@ -12,14 +12,29 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent {
   public appPages = [
     {
-      title: 'Home',
+      title: 'Sobre o Baja',
       url: '/home',
       icon: 'home'
     },
     {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
+      title: 'Comprar',
+      url: '/select-car',
+      icon: 'logo-usd'
+    },
+    {
+      title: 'Manutenção',
+      url: '/maintenance',
+      icon: 'cog'
+    },
+    {
+      title: 'Clube do Baja',
+      url: '/baja-club',
+      icon: 'car'
+    },
+    {
+      title: 'Manual',
+      url: '/manual',
+      icon: 'book'
     }
   ];
 

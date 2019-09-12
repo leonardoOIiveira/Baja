@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+           Modelo X
+        </ion-title>
+      </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <h2 style="text-align: center;"> Modelo x </h2>
+
+    <ion-img src="assets/imgs/car.jpg"></ion-img>
+
+    <div class="div">
+      <h2> Selecione a cor do carro: </h2>
+      <div class="modelo3D">
+
+      </div>
+      <div>
+          <span class="colorPicker" [style.background]="color"
+          [cpToggle]="true"
+          [cpDialogDisplay]="'inline'"
+          [(colorPicker)]="color"></span>      
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+       Selecione o Carro
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <ion-segment scrollable>
+        <ion-segment-button *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
+          Modelo {{ item }}
+        </ion-segment-button>
+      </ion-segment>
+
+      <ion-img src="assets/imgs/car.jpg" ></ion-img>
+
+      <ion-button expand="full" [routerLink]="['/car']"> Ir para página do carro </ion-button>
+  </div>    
+</ion-content>
