@@ -17,15 +17,14 @@
 
     <div class="div">
       <h2> Selecione a cor do carro: </h2>
-      <div class="modelo3D">
-
-      </div>
+      <div  #domObj></div>
       <div>
-          <span class="colorPicker" [style.background]="color"
-          [cpToggle]="true"
+          <span class="colorPicker" [cpWidth]="'288px'" [style.background]="color"
+          [cpToggle]="true" [cpOutputFormat]="'hex'" [cpColorMode]="'color'"
           [cpDialogDisplay]="'inline'"
-          [(colorPicker)]="color"></span>      
+          [(colorPicker)]="color" (colorPickerChange)="ChangeColor()"></span>      
       </div>
     </div>
+    <ion-button expand="full" > Continuar </ion-button>
   </div>
 </ion-content>
