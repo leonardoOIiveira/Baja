@@ -1,0 +1,10 @@
+version: '3'
+services: 
+    nestbaja: 
+        build: 
+            dockerfile: ./Dockerfile
+            context: . 
+        container_name: nestjs-baja-v2
+        ports: 
+            - '3000:3000'
+        

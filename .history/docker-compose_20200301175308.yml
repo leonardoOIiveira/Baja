@@ -1,0 +1,10 @@
+version: '3'
+services: 
+    ionic: 
+        build: 
+            dockerfile: ./Dockerfile
+            context: . 
+        container_name: ionic-app-baja
+        ports: 
+            - '8100:8100'
+        
