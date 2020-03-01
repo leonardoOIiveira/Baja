@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'maintenance', loadChildren: './pages/maintenance/maintenance.module#MaintenancePageModule' },
   { path: 'baja-club', loadChildren: './pages/baja-club/baja-club.module#BajaClubPageModule' },
   { path: 'manual', loadChildren: './pages/manual/manual.module#ManualPageModule' },
-  { path: 'car', loadChildren: './pages/car/car.module#CarPageModule' }
+  { path: 'car', loadChildren: './pages/car/car.module#CarPageModule' },
 ];
 
 @NgModule({

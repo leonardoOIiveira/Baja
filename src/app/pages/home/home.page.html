@@ -1,22 +1,46 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      Home
+      Partida
     </ion-title>
+
   </ion-toolbar>
 </ion-header>
+
 <ion-content>
+
+
   <div class="container">
-     <h2> Sobre o Baja </h2>
-    <ion-img src="assets/imgs/logo-baja.png"></ion-img>
+     <h2 class="ion-text-center"> Sobre o Baja </h2>
+    <br><br>
+    <p class="ion-text-justify">A PAC Baja, inserida no mercado automobilístico off-road há 10 anos, oferece aos seus clientes o melhor no cenário de aventura.<br>
+      <br>
+      Com protótipos de chassi tubular e motor de 10 hp personalizados e atendimento humanizado, buscamos proporcionar serviços e produtos de excelência.
+      <br><br>
+      Assim como em nossos valores, trabalhamos todos os dias com profissionalismo, paixão e comprometimento, investindo em pesquisa e tecnologia para oferecer constantemente inovação, qualidade, segurança e alta performance na sua experiência de compra.</p>
+      <br>
+  </div>
 
-    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tenetur sunt reprehenderit, magni iste quam omnis quasi fuga alias debitis? Eos commodi architecto iste quo aut suscipit quasi repudiandae quisquam! </p>
+  <div class="container">
+    
+    <ion-slides class="slide-padding" pager="false">
+      <ion-slide *ngFor="let story of topStories">
+        <div class="container">
+          <ion-img src="{{story.picture}}"></ion-img>
+          <h2 class="slidetitle">
+            <span class="block">Fotos</span>
+          </h2>
+          <p class="author">By PacBaja</p>
+        </div>
+      </ion-slide>
+    </ion-slides>
 
-    <ion-img src="assets/imgs/logo-baja.png"></ion-img>
 
-    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla perspiciatis aliquid eveniet voluptatibus obcaecati? Voluptas animi quam laboriosam est consequatur. Ab, sed quod? Ipsa libero tempora ducimus itaque asperiores sint. </p>
-  </div>   
+  </div>
+
+
+
 </ion-content>

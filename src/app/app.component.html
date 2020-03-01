@@ -1,16 +1,18 @@
 <ion-app>
-  <ion-split-pane>
-    <ion-menu type="overlay">
+  <ion-split-pane >
+    <ion-menu type="overlay" >
+
       <ion-header>
-        <ion-toolbar>
+        <ion-toolbar color="dark">
           <ion-title>Menu</ion-title>
         </ion-toolbar>
       </ion-header>
-      <ion-content>
+
+      <ion-content color="dark">
         <ion-img class="LogoMenu" src="assets/imgs/logo-baja.png" ></ion-img>
-        <ion-list>
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
-            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-list color="dark">
+          <ion-menu-toggle color="dark" auto-hide="false" *ngFor="let p of appPages">
+            <ion-item color="dark" [routerDirection]="'root'" [routerLink]="[p.url]">
               <ion-icon slot="start" [name]="p.icon"></ion-icon>
               <ion-label>
                 {{p.title}}

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatePicker } from '@ionic-native/date-picker/ngx';
+import { HttpService } from 'src/app/core/services/http.service';
 
 
 @Component({
@@ -9,7 +10,10 @@ import { DatePicker } from '@ionic-native/date-picker/ngx';
 })
 export class MaintenancePage implements OnInit {
 
-  constructor(private datePicker: DatePicker) { }
+  view: any = 'agendar'; 
+  constructor(
+    private datePicker: DatePicker, 
+    private httpService: HttpService) { }
 
   ngOnInit() {
   }
@@ -29,4 +33,7 @@ export class MaintenancePage implements OnInit {
     );
   }
 
+  FazerManutencao(manutencao) {
+
+  }
 }

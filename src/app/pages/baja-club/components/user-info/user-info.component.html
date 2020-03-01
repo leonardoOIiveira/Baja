@@ -1,0 +1,25 @@
+<ion-card>
+  <h1> Perfil </h1>
+  <h2> {{ usuario.nome }} </h2>
+  <div class="contact">
+    <div class="telefone"> {{usuario.telefone}} </div>
+    <div class="email"> {{ usuario.email }} </div>
+  </div>
+
+  <div class="compras" *ngIf="usuario.compra_itens.length != 0">
+    <div class="peca" *ngFor="let item of usuario.compra_itens" >
+      {{ item.peca_id }}
+    </div>
+  </div>
+
+  <div class="manutencoes" *ngIf="usuario.manutencao.length != 0">
+    <div class="peca" *ngFor="let item of usuario.manutencao" >
+      {{ item._id }}
+      <p class="desc"> {{ item.desc }} </p>
+    </div>
+  </div>
+  
+  <div class="servicos">
+    <ion-button expand="block" fill="outline" [routerLink]="[ '/maintenance']"> Serviços </ion-button>
+  </div>
+</ion-card>

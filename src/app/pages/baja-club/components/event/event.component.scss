@@ -1,0 +1,18 @@
+.container {
+    width: 100%;
+    padding: 5px;
+    display: flex;
+
+    .img {
+        width: 30%;
+        height: auto;
+    }
+
+    .conteudo {
+        display: block;
+
+        h1 {
+            font-size: 20px;
+        }
+    }
+}

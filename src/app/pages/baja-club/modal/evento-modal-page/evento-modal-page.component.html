@@ -1,0 +1,19 @@
+<ion-content>
+  <div class="container">
+    <div class="dismiss">
+      <ion-icon (click)="Dismiss()" name="arrow-back"></ion-icon>
+    </div>
+    <img *ngIf="evento.fotos.length != 0" [src]="evento.fotos[0]" alt="Foto de capa do evento">
+    <h1> {{ evento.nome }} </h1>
+    <span class="ingresso"> {{ evento.ingresso ? evento.ingresso : '' }} </span>
+    <p class="descricao">
+      {{ evento.desc }}
+    </p>
+    <p class="data"> {{ evento.data ? evento.data : '' }} </p>
+    <p class="local" *ngIf="evento.local != ''" > Local: {{ evento.local}} </p>
+    <div class="lista-fotos">
+      <img *ngFor="let item of evento.fotos" [src]="item" alt="fotos"> 
+    </div>
+    <ion-button expand="full" (click)="Dismiss()" color="success"> Fechar </ion-button>
+  </div>
+</ion-content>

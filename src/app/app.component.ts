@@ -22,11 +22,6 @@ export class AppComponent {
       icon: 'logo-usd'
     },
     {
-      title: 'Manutenção',
-      url: '/maintenance',
-      icon: 'cog'
-    },
-    {
       title: 'Clube do Baja',
       url: '/baja-club',
       icon: 'car'

@@ -9,16 +9,15 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-import { File } from '@ionic-native/file';
-import { FileTransfer } from '@ionic-native/file-transfer';
-import { DocumentViewer } from '@ionic-native/document-viewer';
 import { DatePicker } from '@ionic-native/date-picker/ngx';
 import { ColorPickerModule } from 'ngx-color-picker';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
+    CoreModule,
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
@@ -28,7 +27,7 @@ import { ColorPickerModule } from 'ngx-color-picker';
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, 
-    DatePicker
+    DatePicker, 
   ],
   bootstrap: [AppComponent]
 })

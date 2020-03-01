@@ -1,0 +1,13 @@
+<ion-card>
+  <div class="container">
+    <div class="img" *ngIf="evento.fotos.length != 0">
+      <img [src]="evento.fotos[0]" alt="Foto do Evento">
+    </div>
+    <div class="conteudo">
+      <h1> {{ evento.nome }} </h1>
+      <p class="data"> Data: {{ evento.data }} </p>
+      <p class="local"> Local: {{evento.local}} </p>
+      <a> Clique para saber mais</a>
+    </div>
+  </div>
+</ion-card>
