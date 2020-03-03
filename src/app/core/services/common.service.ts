@@ -8,11 +8,10 @@ export class CommonService {
 
   constructor(private alertController: AlertController) { }
 
-  async ApresentarAlerta() {
+  async ApresentarAlerta(mensagem: string) {
     const alert = await this.alertController.create({
-      header: 'Alert',
-      subHeader: 'Subtitle',
-      message: 'This is an alert message.',
+      header: 'Aleta',
+      message: mensagem,
       buttons: ['OK']
     });
 

@@ -48,6 +48,11 @@ export class AuthService {
 
   ReadUserInfo() {
     var user: any = JSON.parse(localStorage.getItem('userInfo')); 
+    if(!user) return new Observable(observer => {
+      observer.next(false);
+      observer.complete(); 
+    }); 
+
     return this.httpService.LerDadosDoUsuario(user.user.id, user.access_token);
   }
 }

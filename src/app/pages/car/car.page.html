@@ -4,27 +4,47 @@
           <ion-back-button></ion-back-button>
         </ion-buttons>
         <ion-title>
-           Modelo X
+          Nome do carro
         </ion-title>
       </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="container">
-    <h2 style="text-align: center;"> Modelo x </h2>
+    <h2 style="text-align: center;"> Nome do carro </h2>
 
-    <ion-img src="assets/imgs/car.jpg"></ion-img>
+    <ion-img [src]="'assets/carro/model1/'+images[colorSelected]"></ion-img>
 
     <div class="div">
       <h2> Selecione a cor do carro: </h2>
-      <div  #domObj></div>
+      <ion-select [(ngModel)]="colorSelected">
+        <ion-select-option [value]="i" *ngFor="let item of images; let i = index" >
+          {{ item }}
+        </ion-select-option>
+      </ion-select>
+
+      <!-- <div  #domObj></div>
       <div>
           <span class="colorPicker" [cpWidth]="'288px'" [style.background]="color"
           [cpToggle]="true" [cpOutputFormat]="'hex'" [cpColorMode]="'color'"
           [cpDialogDisplay]="'inline'"
           [(colorPicker)]="color" (colorPickerChange)="ChangeColor()"></span>      
-      </div>
+      </div> -->
     </div>
-    <ion-button expand="full" > Continuar </ion-button>
+
+    <div class="form-buyer">
+      <form [formGroup]="buyer" >
+        <ion-item>
+          <ion-label position="floating"> Nome Completo </ion-label>
+          <ion-input required formControlName="nome" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating"> Email </ion-label>
+          <ion-input required formControlName="email" type="email"></ion-input>
+        </ion-item>
+      </form>
+    </div>
+
+    <ion-button expand="full" color="success" (click)="EnviarPedido()" > Enviar Pedido </ion-button>
   </div>
 </ion-content>

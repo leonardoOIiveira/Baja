@@ -51,7 +51,9 @@
     </div>
 
     <div *ngSwitchDefault>
-      <img *ngFor="let item of patrocinadores" [src]="'assets/patrocinadores/'+item" >
+      <div class="container-patrocinadores">
+        <img *ngFor="let item of patrocinadores" [src]="'assets/patrocinadores/'+item" >
+      </div>
     </div>
   </div>
 </ion-content>

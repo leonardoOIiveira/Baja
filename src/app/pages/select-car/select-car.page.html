@@ -11,14 +11,8 @@
 
 <ion-content>
   <div class="container">
-    <ion-segment scrollable>
-        <ion-segment-button *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
-          Modelo {{ item }}
-        </ion-segment-button>
-      </ion-segment>
-
-      <ion-img src="assets/imgs/car.jpg" ></ion-img>
-
-      <ion-button expand="full" [routerLink]="['/car']"> Ir para página do carro </ion-button>
-  </div>    
+    <div class="list-car" *ngFor="let item of carModels" >
+      <app-car-item [item]="item" [routerLink]="['/car']" ></app-car-item>
+    </div>
+   </div>    
 </ion-content>

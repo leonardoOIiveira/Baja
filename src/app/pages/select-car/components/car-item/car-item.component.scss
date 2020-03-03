@@ -1,0 +1,19 @@
+.container{
+    padding: 3px;
+    display: flex;
+    flex-direction: column-reverse;
+
+    img {
+        border-radius: 3px;
+    }
+
+    .nome {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    img, .nome {
+        margin: 5px 0px;
+    }
+}

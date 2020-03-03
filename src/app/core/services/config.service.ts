@@ -10,6 +10,7 @@ export class ConfigService {
   private eventos: string = '/api/events';
   private usuario: string = '/api/users/';
   private manutencao: string = '/api/manutencao';
+  private pedidoCarro: string = '/api/comprar/carro';
 
   constructor() { }
 

@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SelectCarPage implements OnInit {
 
+  carModels = [
+    {
+        nome: 'Nome do carro', 
+        img: 'assets/carro/model1/01.jpeg'
+    }
+  ]
   constructor() { }
 
   ngOnInit() {

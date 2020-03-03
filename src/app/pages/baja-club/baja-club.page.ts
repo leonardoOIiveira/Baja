@@ -85,7 +85,8 @@ export class BajaClubPage implements OnInit {
   async LerDadosUsuario() {
     await this.authService.ReadUserInfo()
     .subscribe((res:any) => {
-      this.usuario = res; 
+      if(res)
+        this.usuario = res; 
     });
   }
 

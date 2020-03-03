@@ -45,7 +45,15 @@ export class HttpService {
     return this.http.request('post',`${this.configService.GetEndpoints('manutecao')}`,params);
   }
 
+  FazerPedidoDeCompraDeCarro(obj) {
+    return this.http.post(this.configService.GetEndpoints('pedidoCarro'), obj);
+  }
+
   LerListadePatrocinadores() {
     return this.http.get('assets/lists/patrocinadores.txt', {responseType: 'text'});
+  }
+
+  LerOArquivoDeCores() {
+    return this.http.get('assets/lists/cores.txt', {responseType: 'text'});
   }
 }
