@@ -7,16 +7,8 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  topStories: any;
-
+  fotos: string[] = ['assets/img_apre/01.JPG', 'assets/img_apre/02.JPG', 'assets/img_apre/03.JPG']
   constructor() {
-
-    this.topStories = [
-      {picture: "/src/assets/imgs/logo-baja.png"},
-      {picture: "/src/assets/imgs/img2.JPG"},
-      {picture: "/src/assets/imgs/img3.JPG"}
-    ]
-
   }
 
 }

@@ -11,20 +11,22 @@
 </ion-header>
 
 <ion-content>
-
-
   <div class="container">
-     <h2 class="ion-text-center"> Sobre o Baja </h2>
-    <br><br>
+      <h2 class="ion-text-center"> Sobre o Baja </h2>
+      <p class="sobre-texto ion-text-justify" > A PAC Baja, inserida no mercado automobilístico off-road há 10 anos, oferece aos seus clientes o melhor no cenário de aventura. Com protótipos de chassi tubular e motor de 10 hp personalizados e atendimento humanizado, buscamos proporcionar serviços e produtos de excelência. Assim como em nossos valores, trabalhamos todos os dias com profissionalismo, paixão e comprometimento, investindo em pesquisa e tecnologia para oferecer constantemente inovação, qualidade, segurança e alta performance na sua experiência de compra </p>
+      <div class="fotos">
+        <img *ngFor="let item of fotos" [src]="item" alt="Fotos apresentação">
+      </div>
+    <!-- <br><br>
     <p class="ion-text-justify">A PAC Baja, inserida no mercado automobilístico off-road há 10 anos, oferece aos seus clientes o melhor no cenário de aventura.<br>
       <br>
       Com protótipos de chassi tubular e motor de 10 hp personalizados e atendimento humanizado, buscamos proporcionar serviços e produtos de excelência.
       <br><br>
       Assim como em nossos valores, trabalhamos todos os dias com profissionalismo, paixão e comprometimento, investindo em pesquisa e tecnologia para oferecer constantemente inovação, qualidade, segurança e alta performance na sua experiência de compra.</p>
-      <br>
+      <br> -->
   </div>
 
-  <div class="container">
+  <!-- <div class="container">
     
     <ion-slides class="slide-padding" pager="false">
       <ion-slide *ngFor="let story of topStories">
@@ -39,7 +41,7 @@
     </ion-slides>
 
 
-  </div>
+  </div> -->
 
 
 

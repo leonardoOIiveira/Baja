@@ -60,4 +60,8 @@ export class HttpService {
   ListaDePecas() {
     return this.http.get(this.configService.GetEndpoints('pecas'));
   }
+
+  EnviarCompraPecas(list) {
+    return this.http.post(this.configService.GetEndpoints('compraPecas'), list); 
+  }
 }

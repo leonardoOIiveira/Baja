@@ -12,6 +12,7 @@ export class ConfigService {
   private manutencao: string = '/api/manutencao';
   private pedidoCarro: string = '/api/comprar/carro';
   private pecas: string = '/api/pecas';
+  private compraPecas: string = '/api/comprar-pecas'; 
 
   constructor() { }
 
