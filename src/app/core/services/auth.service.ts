@@ -55,4 +55,10 @@ export class AuthService {
 
     return this.httpService.LerDadosDoUsuario(user.user.id, user.access_token);
   }
+
+  GetUserToken() {
+    var user: any = JSON.parse(localStorage.getItem('userInfo')); 
+    if(!user) return false; 
+    else return user.access_token; 
+  }
 }

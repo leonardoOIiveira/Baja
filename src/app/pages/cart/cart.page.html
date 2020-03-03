@@ -7,12 +7,17 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-
+  <div class="preco_total">
+    R$ {{ preco_total }}
+  </div>
   <div class="list-cart-item">
     <app-cart-item *ngFor="let item of listCart"
-     [cart_item]="item" ></app-cart-item>
+     [cart_item]="item"
+     (delete)="DeletarItem(item)"
+     (decrease)="DecreaseItem(item)" ></app-cart-item>
   </div>
 
-  <ion-button> Enviar Pedido! </ion-button>
+  <ion-button expand="block"
+  (click)="EnviarPedido()"> Enviar Pedido! </ion-button>
 
 </ion-content>

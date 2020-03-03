@@ -61,7 +61,14 @@ export class HttpService {
     return this.http.get(this.configService.GetEndpoints('pecas'));
   }
 
-  EnviarCompraPecas(list) {
-    return this.http.post(this.configService.GetEndpoints('compraPecas'), list); 
+  EnviarCompraPecas(list, token) {
+    var params = {
+        headers: {
+          "Authorization": `Bearer ${token}`, 
+          "Accept": "*/*"
+        }, 
+        body: list
+      }
+    return this.http.request('post',this.configService.GetEndpoints('compraPecas'), params); 
   }
 }

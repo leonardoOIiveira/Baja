@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpService } from './http.service';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root'
@@ -7,9 +8,11 @@ import { HttpService } from './http.service';
 export class CartService {
 
   private preco_total: number = 0; 
-  private carrinho: CartItem[] = [];
+  private carrinho: any[] = [];
 
-  constructor(private http: HttpService) { }
+  constructor(
+    private http: HttpService,
+    private authService: AuthService) { }
 
   GetCartInfo() : {preco_total: number, list: CartItem[]} {
     var cart = {
@@ -21,12 +24,13 @@ export class CartService {
 
   AddItemToCart(item: CartItem) {
     var index = this.carrinho.findIndex(x => x._id === item._id); 
+    console.log('index', index); 
     if(index == -1) { // Não encontrou o obj
-      this.carrinho.push(item); 
+      var newObj = new Object(); 
+      newObj = item; newObj['quant'] = 1; 
+      this.carrinho[this.carrinho.length] = newObj; 
     } else {
-      console.log(this.carrinho); 
-      this.carrinho[index].quant += 1; 
-      console.log(this.carrinho, 'depois')
+      this.carrinho[index].quant++; 
     }
     this.preco_total += item.preco;
     return true; 
@@ -37,7 +41,7 @@ export class CartService {
     if(index != -1) {
       console.log('Elemento a ser removido:', this.carrinho[index]); 
       this.carrinho.splice(index, 1); 
-      this.preco_total -= item.preco;
+      this.preco_total -= (item.preco * item.quant);
       console.log(this.carrinho); 
       return true; 
     } else return false; 
@@ -63,7 +67,9 @@ export class CartService {
         quant: item.quant
       }; 
     });
-    return this.http.EnviarCompraPecas(requestArray);
+    var userToken = this.authService.GetUserToken(); 
+    console.log('Objeto request', requestArray, userToken);
+    return this.http.EnviarCompraPecas(requestArray,userToken);
   }
 }
 

@@ -9,4 +9,5 @@
     <app-peca-item *ngFor="let item of pecas" 
     [peca]="item" (addToCart)="AdicionarAoCarrinho(item)" ></app-peca-item>
   </ng-template>
+  <ion-button (click)="ShowCart()" > Mostra Carrinho </ion-button>
 </div>

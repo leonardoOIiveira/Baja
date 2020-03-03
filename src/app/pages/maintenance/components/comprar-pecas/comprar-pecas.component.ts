@@ -31,10 +31,15 @@ export class ComprarPecasComponent implements OnInit {
 
   AdicionarAoCarrinho(item) {
     var newItem = item; 
-    newItem['quant'] = 1; 
+    //newItem['quant'] = 1; 
     var result = this.cartService.AddItemToCart(newItem); 
-    if(result)
+    if(result) {
       this.common.Toast('Item adicionado ao carrinho!'); 
+    }
+  }
+
+  ShowCart() {
+    console.log(this.cartService.GetCartInfo()); 
   }
 
 }

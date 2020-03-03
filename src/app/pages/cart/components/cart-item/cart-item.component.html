@@ -7,8 +7,16 @@
       <div class="quant">
         {{ item.quant }}
       </div>
+      <div class="preco-peca">
+        R$ {{ item.quant * item.preco }}
+      </div>
       <div class="acoes">
-        botoes
+        <ion-button (click)="DecreaseItem()" >
+          <ion-icon name="remove"></ion-icon>
+        </ion-button>
+        <ion-button (click)="RemoveItem()" >
+          <ion-icon name="trash"></ion-icon>
+        </ion-button>
       </div>
     </div>
   </ion-card-content>
