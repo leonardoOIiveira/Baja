@@ -1,0 +1,18 @@
+<ion-card>
+  <ion-card-content class="peca-container">
+    <div class="info">
+      <div class="textos">
+        <div class="nome"> {{ peca.nome }} </div>
+        <div class="desc"> {{ peca.desc }} </div>
+      </div>
+      <div class="preco">
+        R$ {{ peca.preco }}
+      </div>
+    </div>
+    <div class="acoes">
+      <ion-button (click)="AdicionarAoCarrinho()">   
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </div>
+  </ion-card-content>
+</ion-card>

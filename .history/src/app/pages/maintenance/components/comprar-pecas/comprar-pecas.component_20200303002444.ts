@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class ComprarPecasComponent implements OnInit {
 
-  pecas: any[] = []; 
+  pecas: any[]; 
 
   constructor(
     private http: HttpService, 

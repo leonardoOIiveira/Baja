@@ -56,4 +56,8 @@ export class HttpService {
   LerOArquivoDeCores() {
     return this.http.get('assets/lists/cores.txt', {responseType: 'text'});
   }
+
+  ListaDePecas() {
+    return this.http.get(this.configService.GetEndpoints('pecas'));
+  }
 }

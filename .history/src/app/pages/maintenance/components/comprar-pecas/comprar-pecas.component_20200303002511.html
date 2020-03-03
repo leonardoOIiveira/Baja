@@ -1,0 +1,7 @@
+<div class="container-pecas">
+  <ion-button expand="full" (click)="AbrirCarrinho()"> 
+    Ir ao carrinho <ion-icon name="cart"></ion-icon>
+  </ion-button>
+  <app-peca-item *ngFor="let item of pecas" 
+  [peca]="item" (addToCart)="AdicionarAoCarrinho(item)" ></app-peca-item>
+</div>

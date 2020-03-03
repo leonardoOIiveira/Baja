@@ -8,6 +8,7 @@ import { IonicModule } from '@ionic/angular';
 import { MaintenancePage } from './maintenance.page';
 import { AgendarComponent } from './components/agendar/agendar.component';
 import { ComprarPecasComponent } from './components/comprar-pecas/comprar-pecas.component';
+import { PecaItemComponent } from './components/peca-item/peca-item.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,7 @@ const routes: Routes = [
   declarations: [
     MaintenancePage, 
     AgendarComponent, 
+    PecaItemComponent, 
     ComprarPecasComponent
   ]
 })

@@ -1,0 +1,19 @@
+.peca-container {
+    display: flex;
+
+    .info {
+        flex: 2;
+        display: block;
+        color: black;
+
+        .preco {
+            font-size: 20px;
+            color: red;
+            font-weight: bolder;
+        }
+    }
+
+    .acoes {
+        flex: 1;
+    }
+}

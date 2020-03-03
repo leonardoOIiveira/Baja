@@ -11,6 +11,7 @@ export class ConfigService {
   private usuario: string = '/api/users/';
   private manutencao: string = '/api/manutencao';
   private pedidoCarro: string = '/api/comprar/carro';
+  private pecas: string = '/api/pecas';
 
   constructor() { }
 

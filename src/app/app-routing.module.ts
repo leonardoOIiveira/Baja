@@ -19,6 +19,7 @@ const routes: Routes = [
   { path: 'baja-club', loadChildren: './pages/baja-club/baja-club.module#BajaClubPageModule' },
   { path: 'manual', loadChildren: './pages/manual/manual.module#ManualPageModule' },
   { path: 'car', loadChildren: './pages/car/car.module#CarPageModule' },
+  { path: 'cart', loadChildren: './pages/cart/cart.module#CartPageModule' },
 ];
 
 @NgModule({

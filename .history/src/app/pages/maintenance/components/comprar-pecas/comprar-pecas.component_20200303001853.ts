@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from 'src/app/core/services/http.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-comprar-pecas',
@@ -9,11 +8,9 @@ import { Router } from '@angular/router';
 })
 export class ComprarPecasComponent implements OnInit {
 
-  pecas: any[] = []; 
+  pecas: any[]; 
 
-  constructor(
-    private http: HttpService, 
-    private router: Router) { }
+  constructor(private http: HttpService) { }
 
   ngOnInit() {
     this.http.ListaDePecas().subscribe((res: any) => {
@@ -22,11 +19,7 @@ export class ComprarPecasComponent implements OnInit {
   }
 
   AbrirCarrinho() {
-    this.router.navigateByUrl('/cart')
-  }
-
-  AdicionarAoCarrinho(item) {
-    console.log("Adicionando ao carriho"); 
+    
   }
 
 }
