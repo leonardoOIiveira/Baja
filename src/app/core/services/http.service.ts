@@ -44,4 +44,8 @@ export class HttpService {
     };
     return this.http.request('post',`${this.configService.GetEndpoints('manutecao')}`,params);
   }
+
+  LerListadePatrocinadores() {
+    return this.http.get('assets/lists/patrocinadores.txt', {responseType: 'text'});
+  }
 }

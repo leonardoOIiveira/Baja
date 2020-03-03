@@ -22,6 +22,7 @@ export class BajaClubPage implements OnInit {
   /** Variaveis para o login */
   email: string; 
   password: string; 
+  patrocinadores: any; 
 
   /** Dados completos do usuario */
   usuario: any = null;
@@ -41,6 +42,10 @@ export class BajaClubPage implements OnInit {
       this.listaEventos = res.reverse();
     });
     this.LerDadosUsuario(); 
+    //Lendo a lista de patrocinadores 
+    this.http.LerListadePatrocinadores().subscribe((res) => {
+      this.patrocinadores = res.split('\n'); 
+    })
   }
 
   segmentChanged(event){
