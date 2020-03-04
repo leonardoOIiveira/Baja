@@ -42,7 +42,9 @@ export class HttpService {
       }, 
       body: manutencao
     };
-    return this.http.request('post',`${this.configService.GetEndpoints('manutecao')}`,params);
+    var urlRequest = this.configService.GetEndpoints('manutencao'); 
+    console.log(urlRequest); 
+    return this.http.request('post',urlRequest,params);
   }
 
   FazerPedidoDeCompraDeCarro(obj) {

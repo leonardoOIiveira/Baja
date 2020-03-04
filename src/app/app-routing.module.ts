@@ -20,6 +20,7 @@ const routes: Routes = [
   { path: 'manual', loadChildren: './pages/manual/manual.module#ManualPageModule' },
   { path: 'car', loadChildren: './pages/car/car.module#CarPageModule' },
   { path: 'cart', loadChildren: './pages/cart/cart.module#CartPageModule' },
+  { path: 'equipe', loadChildren: './pages/equipe/equipe.module#EquipePageModule' },
 ];
 
 @NgModule({

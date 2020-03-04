@@ -9,10 +9,12 @@ import { MaintenancePage } from './maintenance.page';
 import { AgendarComponent } from './components/agendar/agendar.component';
 import { ComprarPecasComponent } from './components/comprar-pecas/comprar-pecas.component';
 import { PecaItemComponent } from './components/peca-item/peca-item.component';
+import { AuthGuard } from 'src/app/core/guards/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
+    canActivate: [AuthGuard],
     component: MaintenancePage
   }
 ];

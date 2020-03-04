@@ -5,15 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CartPage } from './cart.page';
-import { CartItemComponent } from './components/cart-item/cart-item.component';
-import { AuthGuard } from 'src/app/core/guards/auth.guard';
+import { EquipePage } from './equipe.page';
 
 const routes: Routes = [
   {
     path: '',
-    canActivate: [AuthGuard],
-    component: CartPage
+    component: EquipePage
   }
 ];
 
@@ -24,6 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [CartPage, CartItemComponent]
+  declarations: [EquipePage]
 })
-export class CartPageModule {}
+export class EquipePageModule {}

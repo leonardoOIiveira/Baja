@@ -2,16 +2,18 @@
   <h4> Realizar manutenção </h4>
   <form [formGroup]="formManutencao" >
     <ion-item>
-      <ion-label position="floating"> Data </ion-label>
+      <ion-label> Data </ion-label>
       <ion-input required formControlName="agenda" type="date"></ion-input>
     </ion-item>
+    <ion-select required formControlName="horario"  placeholder="Horário">
+      <ion-select-option *ngFor="let item of [8,9,10,11,12,13,14,15,16,17]" [value]="item+'hrs'"> {{item}}:00 hrs </ion-select-option>
+    </ion-select>
     <ion-item>
       <ion-label position="floating"> Descrição do problema </ion-label>
       <ion-textarea required formControlName="desc" ></ion-textarea>
     </ion-item>
     <ion-select required formControlName="local"  placeholder="Local">
-      <ion-select-option value="f">Female</ion-select-option>
-      <ion-select-option value="m">Male</ion-select-option>
+      <ion-select-option value="bauru">Bauru</ion-select-option>
     </ion-select>
 
     <ion-button expand="block" color="warning" (click)="Comprar()"> Agendar </ion-button>

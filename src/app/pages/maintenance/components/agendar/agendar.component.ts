@@ -13,7 +13,8 @@ export class AgendarComponent implements OnInit {
   formManutencao: FormGroup = new FormGroup({
     agenda: new FormControl(null, Validators.required), 
     desc: new FormControl(null, Validators.required), 
-    local: new FormControl(null, Validators.required)
+    local: new FormControl(null, Validators.required),
+    horario: new FormControl(null, Validators.required)
   });
   
   constructor() { }
@@ -24,7 +25,11 @@ export class AgendarComponent implements OnInit {
     if(!this.formManutencao.valid) {
       console.log('erro'); 
     } else {
-      var manutencao = this.formManutencao.value; 
+      var manutencao = {
+        agenda: `${this.formManutencao.controls.agenda.value} ${this.formManutencao.controls.horario.value}`, 
+        desc: this.formManutencao.controls.desc.value, 
+        local: this.formManutencao.controls.local.value
+      }; 
       
       this.manutencao.emit(manutencao);
     }
