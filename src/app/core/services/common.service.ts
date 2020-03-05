@@ -14,7 +14,7 @@ export class CommonService {
 
   async ApresentarAlerta(mensagem: string) {
     const alert = await this.alertController.create({
-      header: 'Aleta',
+      header: 'Alerta',
       message: mensagem,
       buttons: ['OK']
     });

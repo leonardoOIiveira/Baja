@@ -70,7 +70,8 @@ export class BajaClubPage implements OnInit {
         this.logado = this.authService.isLoggedIn();
         this.LerDadosUsuario(); 
       } else {
-        console.log('Erro ao efetuar o login', res.msg);
+        //console.log('Erro ao efetuar o login', res.msg);
+        this.commonService.ApresentarAlerta(res.msg.error.message); 
       }
     });
     //this.commonService.ApresentarAlerta();
