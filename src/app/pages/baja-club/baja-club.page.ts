@@ -40,6 +40,8 @@ export class BajaClubPage implements OnInit {
     this.http.PegarListaDeEventos().subscribe((res: EventoBaja[]) => {
       console.log(res);
       this.listaEventos = res.reverse();
+    }, (err) => {
+      this.commonService.ApresentarAlerta(err.error.message)
     });
     this.LerDadosUsuario(); 
     //Lendo a lista de patrocinadores 
